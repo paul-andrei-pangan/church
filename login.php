@@ -5,6 +5,7 @@ if (isset($_SESSION['user_id'])) {
     exit();
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,17 +13,23 @@ if (isset($_SESSION['user_id'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="style.css">
- 
 </head>
 <body>
-    <form action="login_action.php" method="post">
-        <label for="username">Username</label>
-        <input type="text" name="username" required><br>
-        
-        <label for="password">Password</label>
-        <input type="password" name="password" required><br>
-        
-        <button type="submit">Login</button>
-    </form>
+    <div class="login-container">
+        <div class="login-box">
+            <h2>Login</h2>
+            <form action="login_action.php" method="post">
+                <div class="textbox">
+                    <input type="text" name="username" placeholder="Username" required>
+                </div>
+                
+                <div class="textbox">
+                    <input type="password" name="password" placeholder="Password" required>
+                </div>
+                
+                <button type="submit" class="btn">Login</button>
+            </form>
+        </div>
+    </div>
 </body>
 </html>
