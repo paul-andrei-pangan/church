@@ -16,26 +16,28 @@ if (!isset($_SESSION['user_id'])) {
 </head>
 <body>
     <div class="container">
-        <header>
+        <!-- Sidebar -->
+        <nav class="sidebar">
             <div class="logo">
-                <h1>Church Management</h1>
+                <h2>Church</h2>
             </div>
-            <div class="user-info">
-                <p>Welcome, <?php echo $_SESSION['user_id']; ?></p>
-                <a href="logout.php" class="logout-btn">Logout</a>
-            </div>
-        </header>
-        
+            <ul>
+                <li><a href="dashboard.php">Dashboard</a></li>
+                <li><a href="manage_members.php">Manage Members</a></li>
+                <li><a href="events.php">Events</a></li>
+                <li><a href="finances.php">Finances</a></li>
+                <li><a href="settings.php">Settings</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main content area -->
         <div class="main-content">
-            <aside class="sidebar">
-                <ul>
-                    <li><a href="dashboard.php">Dashboard</a></li>
-                    <li><a href="manage_members.php">Manage Members</a></li>
-                    <li><a href="events.php">Events</a></li>
-                    <li><a href="finances.php">Finances</a></li>
-                    <li><a href="settings.php">Settings</a></li>
-                </ul>
-            </aside>
+            <header>
+                <div class="user-info">
+                    <p>Welcome, <?php echo $_SESSION['user_id']; ?></p>
+                    <a href="logout.php" class="logout-btn">Logout</a>
+                </div>
+            </header>
 
             <section class="content">
                 <h2>Dashboard Overview</h2>
