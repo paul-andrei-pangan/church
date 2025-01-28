@@ -26,29 +26,21 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up - Church Management System</title>
+    <title>Church Management System</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-       
-        <form action="signup_process.php" method="POST">
-            <h2>Create an Account</h2>
-            
-            <!-- Form fields -->
-            <input type="text" name="full_name" placeholder="Full Name" required>
-            <input type="text" name="address" placeholder="Address" required>
-            <input type="text" name="contact" placeholder="Contact Number" required>
-            <input type="text" name="ministry" placeholder="Ministry" required>
+        <header>
+            Church Management System
+        </header>
+        <form action="login_process.php" method="POST">
+            <h2>Login</h2>
             <input type="email" name="email" placeholder="Enter your email" required>
-            <input type="password" name="password" placeholder="Create your password" required>
-            
-            <!-- Submit Button -->
-            <button type="submit">Sign Up</button>
-
-            <!-- Footer with login link -->
+            <input type="password" name="password" placeholder="Enter your password" required>
+            <button type="submit">Log In</button>
             <div class="form-footer">
-                <p>Already have an account? <a href="login.php">Log In</a></p>
+                <p>Don't have an account? <a href="signup.php">Sign Up</a></p>
             </div>
         </form>
     </div>
