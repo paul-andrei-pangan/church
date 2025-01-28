@@ -5,7 +5,7 @@ if (isset($_SESSION['user_id'])) {
     exit();
 }
 ?>
-
+ 
 <!DOCTYPE html>
 <html lang="en">
 <head>
