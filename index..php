@@ -69,7 +69,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <body> 
     <h1>trysafa </h1>
     <div class="container">
-        <h1>Login</h1>
+        <h1>Loginn</h1>
         <img src="church-design.webp" alt="Church Design">
         <?php if (!empty($error)) echo "<p style='color:red;'>$error</p>"; ?>
         <form method="POST" action="login.php">
