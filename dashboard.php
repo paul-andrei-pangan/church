@@ -27,6 +27,7 @@ if (!isset($_SESSION['user_id'])) {
                 <li><a href="events.php">Events</a></li>
                 <li><a href="finances.php">Finances</a></li>
                 <li><a href="settings.php">Settings</a></li>
+                <a href="logout.php" class="logout-btn">Logout</a>
             </ul>
         </nav>
 
@@ -35,7 +36,6 @@ if (!isset($_SESSION['user_id'])) {
             <header>
                 <div class="user-info">
                     <p>Welcome, <?php echo $_SESSION['user_id']; ?></p>
-                    <a href="logout.php" class="logout-btn">Logout</a>
                 </div>
             </header>
 
