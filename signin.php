@@ -26,31 +26,31 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Signin</title>
+    <title>Sign Up - Church Management System</title>
     <link rel="stylesheet" href="style.css">
-
 </head>
 <body>
-    <form action="signin.php" method="post">
-        <label for="full_name">Full Name</label>
-        <input type="text" name="full_name" required><br>
+    <div class="container">
+       
+        <form action="signup_process.php" method="POST">
+            <h2>Create an Account</h2>
+            
+            <!-- Form fields -->
+            <input type="text" name="full_name" placeholder="Full Name" required>
+            <input type="text" name="address" placeholder="Address" required>
+            <input type="text" name="contact" placeholder="Contact Number" required>
+            <input type="text" name="ministry" placeholder="Ministry" required>
+            <input type="email" name="email" placeholder="Enter your email" required>
+            <input type="password" name="password" placeholder="Create your password" required>
+            
+            <!-- Submit Button -->
+            <button type="submit">Sign Up</button>
 
-        <label for="address">Address</label>
-        <input type="text" name="address" required><br>
-
-        <label for="contact">Contact</label>
-        <input type="text" name="contact" required><br>
-
-        <label for="ministry">Ministry</label>
-        <input type="text" name="ministry" required><br>
-
-        <label for="username">Username</label>
-        <input type="text" name="username" required><br>
-
-        <label for="password">Password</label>
-        <input type="password" name="password" required><br>
-
-        <button type="submit">Create Account</button>
-    </form>
+            <!-- Footer with login link -->
+            <div class="form-footer">
+                <p>Already have an account? <a href="login.php">Log In</a></p>
+            </div>
+        </form>
+    </div>
 </body>
 </html>
