@@ -67,7 +67,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </style>
 </head>
 <body> 
-    <h1>trysafa </h1>
+    <h1>try  safa </h1>
     <div class="container">
         <h1>Loginn</h1>
         <img src="church-design.webp" alt="Church Design">
