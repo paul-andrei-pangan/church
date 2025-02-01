@@ -1,22 +1,30 @@
 <?php
 session_start();
-include 'db.php';
+include 'db.php'; // Make sure db.php is correctly included
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST['username'];
     $password = $_POST['password'];
 
-    $stmt = $conn->prepare("SELECT id, FullName, password FROM users WHERE username=?");
-    $stmt->bind_param("s", $username);
+    // Prepare the SQL query (adjust the column name if necessary)
+    $stmt = $conn->prepare("SELECT user_id, FullName, password FROM users WHERE username=?");
+
+    if ($stmt === false) {
+        // If statement preparation fails, output the error
+        die('Error preparing statement: ' . $conn->error);
+    }
+
+    $stmt->bind_param("s", $username);  // "s" means the parameter is a string
     $stmt->execute();
     $stmt->store_result();
     
     if ($stmt->num_rows > 0) {
-        $stmt->bind_result($id, $fullname, $hashed_password);
+        $stmt->bind_result($user_id, $fullname, $hashed_password);
         $stmt->fetch();
         
+        // Verify the password
         if (password_verify($password, $hashed_password)) {
-            $_SESSION['user_id'] = $id;
+            $_SESSION['user_id'] = $user_id;
             $_SESSION['fullname'] = $fullname;
             header("Location: dashboard.php");
             exit();
@@ -55,7 +63,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <button type="submit">Login</button>
         </form>
 
-        <p>you don't have account? <a href="register.php">register here</a></p>
+        <p>Don't have an account? <a href="register.php">Register here</a></p>
     </div>
 
 </body>
