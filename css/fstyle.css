@@ -58,7 +58,8 @@ h2 {
 }
 
 /* Button Style */
-.btn-back {
+.btn-back,
+.btn-edit {
     background-color: #007bff;
     color: white;
     border: none;
@@ -70,8 +71,55 @@ h2 {
     transition: background 0.3s ease, transform 0.3s ease;
 }
 
-.btn-back:hover {
+.btn-back:hover,
+.btn-edit:hover {
     background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Form Styling for Edit Profile */
+form {
+    margin-top: 20px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form label {
+    font-weight: bold;
+    font-size: 1rem;
+    color: #333;
+}
+
+form input {
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    width: 100%;
+}
+
+form input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Button for Saving Changes */
+button[type="submit"] {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #218838;
     transform: scale(1.05);
 }
 
