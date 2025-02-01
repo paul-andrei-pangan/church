@@ -29,9 +29,7 @@ if ($result->num_rows > 0) {
     $ministry = $user['ministry'];
     $username = $user['username'];
     // Do not display the password in the profile for security reasons
-    $password = $user['password']; // Not used in the profile
 } else {
-    // If no user found, display an error or redirect
     echo "User not found!";
     exit();
 }
@@ -59,6 +57,7 @@ if ($result->num_rows > 0) {
             <p><strong>Ministry:</strong> <?php echo $ministry; ?></p>
             <!-- Don't display password for security reasons -->
         </div>
+        <a href="edit_profile.php" class="btn-edit">Edit Profile</a>
         <button onclick="goBack()" class="btn-back">Back to Home</button>
     </div>
 
