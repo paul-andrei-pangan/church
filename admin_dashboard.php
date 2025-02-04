@@ -18,8 +18,53 @@ $result = mysqli_query($conn, $query);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pending Users</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        /* Optional: Style for the Menu */
+        .menu {
+            display: none;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            z-index: 1000;
+        }
+
+        .menu a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            padding: 10px;
+        }
+
+        .menu a:hover {
+            background-color: #444;
+        }
+
+        .menu-btn {
+            font-size: 30px;
+            cursor: pointer;
+            color: #fff;
+            padding: 10px;
+        }
+    </style>
 </head>
 <body>
+    <!-- Hamburger Menu Button -->
+    <div class="d-flex justify-content-end mt-3">
+        <span class="menu-btn" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </span>
+    </div>
+
+    <!-- Menu -->
+    <div id="menu" class="menu">
+        <a href="logout.php">Sign Out</a>
+    </div>
+
     <div class="container mt-5">
         <h2 class="text-center mb-4">Pending Users for Approval</h2>
         <div class="table-responsive">
@@ -45,6 +90,14 @@ $result = mysqli_query($conn, $query);
             </table>
         </div>
     </div>
+
+    <script>
+        // Function to toggle the menu visibility
+        function toggleMenu() {
+            const menu = document.getElementById("menu");
+            menu.style.display = (menu.style.display === "block") ? "none" : "block";
+        }
+    </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
