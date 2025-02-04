@@ -71,8 +71,8 @@ if (isset($_POST['admin_login'])) {
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body">
-            <a href="admin_login.php" class="btn btn-danger w-100">
-                <i class="fas fa-sign-out-alt"></i> Sign Out
+            <a href="login.php" class="btn btn-danger w-100">
+                <i class="fas fa-sign-out-alt"></i> Back To Login User
             </a>
         </div>
     </div>
