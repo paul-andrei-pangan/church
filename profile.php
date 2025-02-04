@@ -44,7 +44,6 @@ if ($result->num_rows > 0) {
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <style>
-   <style>
     /* Sidebar Styles */
     .sidebar {
         width: 250px;
