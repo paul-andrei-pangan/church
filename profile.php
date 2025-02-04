@@ -150,6 +150,7 @@ if ($result->num_rows > 0) {
 
     .btn-back {
         background-color: #e74c3c;
+        width: 20px;
     }
 
     .btn-back:hover {
