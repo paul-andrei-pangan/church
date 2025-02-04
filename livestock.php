@@ -156,7 +156,7 @@ if (isset($_GET['delete_livestock_id'])) {
 <body>
 
 <div class="sidebar">
-    <h2>🐄 Livestock Dashboard</h2>
+    <h2>Dashboard</h2>
     <ul>
         <li><a href="index.php">🏠 Home</a></li>
         <li><a href="profile.php">👤 Profile</a></li>
