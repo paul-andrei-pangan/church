@@ -35,34 +35,35 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Expense</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        /* General Styles */
         body {
             font-family: 'Poppins', sans-serif;
-            background: #f8f9fa;
             margin: 0;
             padding: 0;
+            background-color: #f4f4f4;
             display: flex;
-            min-height: 100vh;
         }
 
         /* Sidebar Styles */
         .sidebar {
             width: 250px;
-            background: #007bff;
-            color: white;
-            padding: 20px;
-            height: 100vh;
+            background-color: #2c3e50;
+            color: #fff;
+            padding: 20px 10px;
             position: fixed;
-            left: 0;
-            top: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
         }
 
         .sidebar h2 {
             text-align: center;
             margin-bottom: 20px;
+            color: #ecf0f1;
+            font-size: 20px;
         }
 
         .sidebar ul {
@@ -71,31 +72,26 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
 
         .sidebar ul li {
-            margin: 15px 0;
+            margin: 10px 0; /* Reduced margin between items */
         }
 
         .sidebar ul li a {
-            color: white;
+            color: #fff;
             text-decoration: none;
-            font-size: 18px;
+            font-size: 14px; /* Smaller font size for compactness */
             display: block;
-            padding: 10px;
-            border-radius: 5px;
+            padding: 8px 12px; /* Reduced padding for smaller buttons */
+            border-radius: 4px;
         }
 
         .sidebar ul li a:hover {
-            background: #0056b3;
+            background-color: #34495e;
         }
 
-        .logout {
-            color: red !important;
-        }
-
-        /* Main Content */
         .main-content {
-            margin-left: 280px;
-            padding: 20px;
-            flex-grow: 1;
+            margin-left: 250px;
+            padding: 30px;
+            width: 100%;
         }
 
         h2 {
@@ -135,7 +131,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
 
         button {
-            background: #007bff;
+            background-color: #007bff;
             color: white;
             padding: 10px;
             width: 100%;
@@ -147,7 +143,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
 
         button:hover {
-            background: #0056b3;
+            background-color: #0056b3;
         }
 
         /* Success/Error Messages */
@@ -159,12 +155,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
 
         .success {
-            background: #28a745;
+            background-color: #28a745;
             color: white;
         }
 
         .error {
-            background: #dc3545;
+            background-color: #dc3545;
             color: white;
         }
 
@@ -192,6 +188,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 </head>
 <body>
 
+<!-- Sidebar -->
 <div class="sidebar">
     <h2>💸 Dashboard</h2>
     <ul>
@@ -207,6 +204,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     </ul>
 </div>
 
+<!-- Main Content -->
 <div class="main-content">
     <h2>💸 Add a New Expense</h2>
 
@@ -219,26 +217,24 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <div class="form-container">
         <h3>Record Your Expense</h3>
         <form method="POST" action="add_expenses.php">
-    <label for="expense_name">Expense Name:</label>
-    <input type="text" name="expense_name" id="expense_name" required placeholder="Enter expense name">
+            <label for="expense_name">Expense Name:</label>
+            <input type="text" name="expense_name" id="expense_name" required placeholder="Enter expense name">
 
-    <label for="amount">Amount:</label>
-    <input type="number" name="amount" id="amount" required step="0.01" placeholder="Enter amount">
+            <label for="amount">Amount:</label>
+            <input type="number" name="amount" id="amount" required step="0.01" placeholder="Enter amount">
 
-    <label for="description">Description:</label>
-    <textarea name="description" id="description" placeholder="Enter description"></textarea>
+            <label for="description">Description:</label>
+            <textarea name="description" id="description" placeholder="Enter description"></textarea>
 
-    <label for="expense_date">Expense Date:</label>
-    <input type="date" name="expense_date" id="expense_date" required>
+            <label for="expense_date">Expense Date:</label>
+            <input type="date" name="expense_date" id="expense_date" required>
 
-    <button type="submit"> Add Expense</button>
-    <br></br>
-    <a href="expenses.php">
-        <button type="button" style="background-color: #dc3545;"> Cancel</button>
-    </a>
-    
-</form>
-
+            <button type="submit">Add Expense</button>
+            <br><br>
+            <a href="expenses.php">
+                <button type="button" style="background-color: #dc3545;">Cancel</button>
+            </a>
+        </form>
     </div>
 </div>
 
