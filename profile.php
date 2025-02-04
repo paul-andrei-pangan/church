@@ -44,8 +44,8 @@ if ($result->num_rows > 0) {
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <style>
-        /* Sidebar Styles */
-.sidebar {
+    /* Sidebar Styles */
+    .sidebar {
         width: 250px;
         background-color: #2c3e50;
         color: white;
@@ -62,7 +62,7 @@ if ($result->num_rows > 0) {
         text-align: center;
         margin-bottom: 20px;
         font-weight: 600;
-        font-size: 18px; /* Smaller font for consistency */
+        font-size: 18px;
     }
 
     .sidebar ul {
@@ -79,7 +79,7 @@ if ($result->num_rows > 0) {
     .sidebar ul li a {
         color: white;
         text-decoration: none;
-        font-size: 14px; /* Smaller font size for compactness */
+        font-size: 14px;
         display: flex;
         align-items: center;
         padding: 8px 12px;
@@ -92,7 +92,100 @@ if ($result->num_rows > 0) {
         background: #34495e;
     }
 
-    </style>
+    /* Main content container */
+    .container {
+        margin-left: 280px; /* Allow space for the sidebar */
+        padding: 20px;
+        max-width: 100%;
+        overflow: auto;
+        background-color: #f8f9fa;
+    }
+
+    h2 {
+        color: #333;
+        font-size: 22px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    /* Profile Section */
+    .profile-section {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin: 0 auto;
+        width: 100%;
+        max-width: 400px; /* Limit width for mobile screens */
+        margin-bottom: 30px;
+    }
+
+    .profile-section p {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+
+    .profile-section strong {
+        color: #007bff; /* Blue color for the labels */
+    }
+
+    /* Buttons */
+    .btn-edit, .btn-back {
+        background-color: #007bff;
+        color: white;
+        padding: 10px 15px;
+        font-size: 16px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 100%;
+        transition: background-color 0.3s ease;
+        margin-top: 20px;
+    }
+
+    .btn-edit:hover, .btn-back:hover {
+        background-color: #0056b3;
+    }
+
+    .btn-back {
+        background-color: #e74c3c;
+    }
+
+    .btn-back:hover {
+        background-color: #c0392b;
+    }
+
+    /* Mobile responsive styles */
+    @media (max-width: 768px) {
+        .container {
+            margin-left: 0; /* Remove left margin on mobile */
+            padding: 10px;
+        }
+
+        .sidebar {
+            width: 200px; /* Narrow the sidebar on smaller screens */
+            padding: 10px;
+        }
+
+        .sidebar h2 {
+            font-size: 16px;
+        }
+
+        .sidebar ul li a {
+            font-size: 12px;
+            padding: 6px 10px;
+        }
+
+        .profile-section {
+            width: 90%; /* Make the profile form width smaller for mobile */
+        }
+
+        .btn-edit, .btn-back {
+            font-size: 14px; /* Smaller button text for mobile */
+        }
+    }
+</style>
+
 </head>
 <body class="fade-in">
 <div class="sidebar">
