@@ -166,7 +166,7 @@ a {
 <body>
 
 <div class="sidebar">
-    <h2>💸 Dashboard</h2>
+    <h2>💰Dashboard</h2>
     <ul>
         <li><a href="index.php">🏠 Home</a></li>
         <li><a href="profile.php">👤 Profile</a></li>

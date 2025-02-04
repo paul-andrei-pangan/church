@@ -160,7 +160,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <body>
 
 <div class="sidebar">
-    <h2>💸 Dashboard</h2>
+    <h2>💰Dashboard</h2>
     <ul>
     <li><a href="dashboard.php">🏠 Home</a></li>
         <li><a href="profile.php">👤 Profile</a></li>
