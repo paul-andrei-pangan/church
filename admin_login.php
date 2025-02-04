@@ -36,6 +36,9 @@ if (isset($_POST['admin_login'])) {
             background-position: center;
             background-repeat: no-repeat;
         }
+        form{
+            background-color: transparent
+        }
     </style>
 </head>
 <body class="bg-light">
