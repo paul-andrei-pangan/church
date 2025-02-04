@@ -44,113 +44,115 @@ if (isset($_GET['delete_expense_id'])) {
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         /* General Styles */
-        body {
-            font-family: 'Poppins', sans-serif;
-            background: #f8f9fa;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            min-height: 100vh;
-        }
+      /* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    min-height: 100vh;
+}
 
-        /* Sidebar Styles */
-        .sidebar {
-            width: 250px;
-            background: #007bff;
-            color: white;
-            padding: 20px;
-            height: 100vh;
-            position: fixed;
-            left: 0;
-            top: 0;
-        }
+/* Sidebar Styles */
+.sidebar {
+    width: 250px;
+    background: #007bff;
+    color: white;
+    padding: 20px;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
 
-        .sidebar h2 {
-            text-align: center;
-            margin-bottom: 20px;
-        }
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
 
-        .sidebar ul {
-            list-style: none;
-            padding: 0;
-        }
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
 
-        .sidebar ul li {
-            margin: 15px 0;
-        }
+.sidebar ul li {
+    margin: 15px 0;
+}
 
-        .sidebar ul li a {
-            color: white;
-            text-decoration: none;
-            font-size: 18px;
-            display: block;
-            padding: 10px;
-            border-radius: 5px;
-        }
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+}
 
-        .sidebar ul li a:hover {
-            background: #0056b3;
-        }
+.sidebar ul li a:hover {
+    background: #0056b3;
+}
 
-        /* Main Content */
-        .main-content {
-            margin-left: 280px;
-            padding: 20px;
-            flex-grow: 1;
-        }
+/* Main Content */
+.main-content {
+    margin-left: 280px;
+    padding: 20px;
+    flex-grow: 1;
+}
 
-        h2 {
-            color: #333;
-        }
+h2 {
+    color: #333;
+}
 
-        /* Table Styles */
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
 
-        table, th, td {
-            border: 1px solid #ddd;
-        }
+table, th, td {
+    border: 1px solid #ddd;
+}
 
-        th, td {
-            padding: 10px;
-            text-align: left;
-        }
+th, td {
+    padding: 10px;
+    text-align: left;
+}
 
-        th {
-            background: #007bff;
-            color: white;
-        }
+th {
+    background: #007bff;
+    color: white;
+}
 
-        tr:nth-child(even) {
-            background-color: #f2f2f2;
-        }
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
 
-        tr:hover {
-            background-color: #ddd;
-        }
+tr:hover {
+    background-color: #ddd;
+}
 
-        /* Button Styles */
-        button {
-            background-color: #007bff;
-            color: white;
-            padding: 10px 15px;
-            font-size: 16px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: 0.3s;
-        }
+/* Button Styles */
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
 
-        button:hover {
-            background-color: #0056b3;
-        }
+button:hover {
+    background-color: #0056b3;
+}
 
-        a {
-            text-decoration: none;
-        }
+a {
+    text-decoration: none;
+}
+
     </style>
 </head>
 <body>
