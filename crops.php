@@ -42,8 +42,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <style>
-        /* General Styles */
-        body {
+       /* General Styles */
+       body {
             font-family: 'Poppins', sans-serif;
             background: #f8f9fa;
             margin: 0;
@@ -51,142 +51,119 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             display: flex;
             min-height: 100vh;
         }
-/* Sidebar Styles */
-.sidebar {
-    width: 220px; /* Reduced width */
-    background: #1e2a47; /* Darker blue background */
-    color: white;
-    padding: 15px; /* Reduced padding */
-    height: 100vh;
-    position: fixed;
-    left: 0;
-    top: 0;
-}
-
-.sidebar h2 {
-    text-align: center;
-    margin-bottom: 15px; /* Reduced margin */
-    font-size: 22px; /* Slightly smaller font size */
-    color: #f39c12; /* Golden color for the title */
-}
-
-.sidebar ul {
-    list-style: none;
-    padding: 0;
-}
-
-.sidebar ul li {
-    margin: 10px 0; /* Reduced margin between list items */
-}
-
-.sidebar ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 16px; /* Smaller font size */
-    display: block;
-    padding: 8px; /* Reduced padding */
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.sidebar ul li a:hover {
-    background: #34495e; /* Lighter blue-gray on hover */
-}
-
-.logout {
-    color: #e74c3c !important; /* Red color for logout */
-    font-weight: bold;
-}
-
-
-
-        /* Main Content */
-        .main-content {
-            margin-left: 280px;
+   /* Sidebar Styles */
+   .sidebar {
+            width: 250px;
+            background-color: #2c3e50;
+            color: white;
             padding: 20px;
+            height: 100vh;
+            position: fixed;
+            left: 0;
+            top: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .sidebar h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-weight: 600;
+            font-size: 18px; /* Smaller font for consistency */
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
             flex-grow: 1;
         }
 
-        h2 {
-            color: #333;
+        .sidebar ul li {
+            margin: 8px 0;
         }
 
-        /* Add Crop Form */
-        .form-container {
-            background-color: white;
-            padding: 20px;
-            border-radius: 10px;
-            width: 400px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            margin: auto;
-        }
-
-        .form-container h3 {
-            color: #007bff;
-            font-size: 22px;
-            margin-bottom: 15px;
-        }
-
-        label {
-            display: block;
-            font-weight: bold;
-            margin: 10px 0 5px;
-        }
-
-        input {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 16px;
-        }
-
-        button {
-            background: #007bff;
+        .sidebar ul li a {
             color: white;
-            padding: 10px;
-            width: 100%;
-            border: none;
+            text-decoration: none;
+            font-size: 14px; /* Smaller font size for compactness */
+            display: flex;
+            align-items: center;
+            padding: 8px 12px;
             border-radius: 5px;
-            font-size: 18px;
-            cursor: pointer;
             transition: 0.3s;
         }
 
-        button:hover {
-            background: #0056b3;
+        .sidebar ul li a:hover,
+        .sidebar ul li a.active {
+            background: #34495e;
         }
 
-        /* Cancel Button Styles */
-        .cancel-button {
-            background-color: #dc3545;
-            width: 100%;
-            margin-top: 10px;
-        }
 
-        .cancel-button:hover {
-            background-color: #c82333;
-        }
-
-        /* Success/Error Messages */
-        .message {
-            padding: 10px;
+        .logout {
+            color: #e74c3c !important;
             font-weight: bold;
-            border-radius: 5px;
-            margin-bottom: 15px;
         }
+   /* Main Content */
+   .main-content {
+        margin-left: 280px;
+        padding: 20px;
+        flex-grow: 1;
+    }
 
-        .success {
-            background: #28a745;
-            color: white;
-        }
+    h2 {
+        color: #333;
+        font-size: 22px; /* Matching the heading size from the dashboard */
+    }
 
-        .error {
-            background: #dc3545;
-            color: white;
-        }
+    /* Table Styles */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+
+    table, th, td {
+        border: 1px solid #ddd;
+    }
+
+    th, td {
+        padding: 8px 10px; /* Reduced padding for compactness */
+        text-align: left;
+        font-size: 14px; /* Smaller font size for table data */
+    }
+
+    th {
+        background: #007bff;
+        color: white;
+    }
+
+    tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+    tr:hover {
+        background-color: #ddd;
+    }
+
+    /* Button Styles */
+    button {
+        background-color: #2c3e50;
+        color: white;
+        padding: 8px 12px;
+        font-size: 14px; /* Smaller button text */
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    button:hover {
+        background-color: #34495e;
+    }
+
+    a {
+        text-d
     </style>
 </head>
 <body>
