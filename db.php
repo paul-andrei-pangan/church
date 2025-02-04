@@ -1,8 +1,8 @@
 <?php
 $servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "church_managament";  
+$username = "u554719115_personal";
+$password = "Panganpaul09+";
+$dbname = "u554719115_church_db";  // Siguraduhing tama ang pangalan ng database dito
 
 // Pag-connect sa database
 $conn = new mysqli($servername, $username, $password, $dbname);
