@@ -170,6 +170,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         button:hover {
             background: #0056b3;
         }
+
+        /* Cancel Button Styles */
+        .cancel-button {
+            background-color: #dc3545;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .cancel-button:hover {
+            background-color: #c82333;
+        }
     </style>
 </head>
 <body>
@@ -186,8 +197,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <li><a href="expenses.php">💸 Expenses</a></li>
         <li><a href="income.php">💰 Income</a></li>
         <li><a href="logout.php" class="logout">🚪 Logout</a></li>
-    </ul>a href="logout.php" class="logout">🚪 Logout</a></li>
-    
+    </ul>
 </div>
 
 <div class="main-content">
@@ -209,6 +219,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <input type="date" name="expense_date" value="<?php echo htmlspecialchars($expense['expense_date']); ?>" required>
 
             <button type="submit">Update Expense</button>
+            <!-- Cancel Button -->
+            <a href="expenses.php">
+                <button type="button" class="cancel-button">Cancel</button>
+            </a>
         </form>
     </div>
 </div>

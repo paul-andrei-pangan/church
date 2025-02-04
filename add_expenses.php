@@ -219,20 +219,26 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <div class="form-container">
         <h3>Record Your Expense</h3>
         <form method="POST" action="add_expenses.php">
-            <label for="expense_name">Expense Name:</label>
-            <input type="text" name="expense_name" id="expense_name" required placeholder="Enter expense name">
+    <label for="expense_name">Expense Name:</label>
+    <input type="text" name="expense_name" id="expense_name" required placeholder="Enter expense name">
 
-            <label for="amount">Amount:</label>
-            <input type="number" name="amount" id="amount" required step="0.01" placeholder="Enter amount">
+    <label for="amount">Amount:</label>
+    <input type="number" name="amount" id="amount" required step="0.01" placeholder="Enter amount">
 
-            <label for="description">Description:</label>
-            <textarea name="description" id="description" placeholder="Enter description"></textarea>
+    <label for="description">Description:</label>
+    <textarea name="description" id="description" placeholder="Enter description"></textarea>
 
-            <label for="expense_date">Expense Date:</label>
-            <input type="date" name="expense_date" id="expense_date" required>
+    <label for="expense_date">Expense Date:</label>
+    <input type="date" name="expense_date" id="expense_date" required>
 
-            <button type="submit">💸 Add Expense</button>
-        </form>
+    <button type="submit"> Add Expense</button>
+    <br></br>
+    <a href="expenses.php">
+        <button type="button" style="background-color: #dc3545;"> Cancel</button>
+    </a>
+    
+</form>
+
     </div>
 </div>
 
