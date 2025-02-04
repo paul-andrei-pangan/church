@@ -165,6 +165,7 @@ if (isset($_GET['delete_expense_id'])) {
         <li><a href="livestock.php">🐄 Livestock</a></li>
         <li><a href="inventory.php">📦 Inventory</a></li>
         <li><a href="expenses.php">💸 Expenses</a></li>
+        <li><a href="income.php">💰 Income</a></li>
         <li><a href="logout.php" class="logout">🚪 Logout</a></li>
     </ul>
 </div>
