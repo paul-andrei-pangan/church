@@ -8,12 +8,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST['username'];
     $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
-    // Removed ministry from the insert query
-    $stmt = $conn->prepare("INSERT INTO users (FullName, Address, Contact, username, password) VALUES (?, ?, ?, ?, ?)");
+    // Insert user with status 'pending'
+    $stmt = $conn->prepare("INSERT INTO users (FullName, Address, Contact, username, password, status) VALUES (?, ?, ?, ?, ?, 'pending')");
     $stmt->bind_param("sssss", $fullname, $address, $contact, $username, $password);
 
     if ($stmt->execute()) {
-        $success_message = "Registration successful! <a href='login.php'>Login here</a>";
+        $success_message = "Registration successful! Your account is pending approval. Please wait for admin approval.";
     } else {
         $error_message = "Error: " . $stmt->error;
     }
@@ -43,13 +43,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <input type="text" name="fullname" placeholder="Full Name" required>
             <input type="text" name="address" placeholder="Address" required>
             <input type="text" name="contact" placeholder="Contact" required>
-            <!-- Removed ministry field -->
             <input type="text" name="username" placeholder="Username" required>
             <input type="password" name="password" placeholder="Password" required>
             <button type="submit">Register</button>
         </form>
 
-        <p>I have an account? <a href="login.php">login here</a></p>
+        <p>I have an account? <a href="login.php">Login here</a></p>
     </div>
 
 </body>
