@@ -29,7 +29,7 @@ $inventoryResult = $query->get_result();
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
      /* General Styles */
-     body {
+body {
     font-family: 'Poppins', sans-serif;
     background: #f8f9fa;
     margin: 0;
