@@ -49,7 +49,7 @@ $result = mysqli_query($conn, $query);
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body">
-            <a href="logout.php" class="btn btn-danger w-100">
+            <a href="admin_login.php" class="btn btn-danger w-100">
                 <i class="fas fa-sign-out-alt"></i> Sign Out
             </a>
         </div>
