@@ -27,14 +27,14 @@ $result = mysqli_query($conn, $query);
             top: 10px;
             right: 10px;
             background-color: rgba(0, 0, 0, 0.8);
-            color: white;
+            color: black;
             padding: 15px;
             border-radius: 5px;
             z-index: 1000;
         }
 
         .menu a {
-            color: white;
+            color: black;
             text-decoration: none;
             display: block;
             padding: 10px;
