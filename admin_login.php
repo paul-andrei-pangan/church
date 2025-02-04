@@ -31,7 +31,7 @@ if (isset($_POST['admin_login'])) {
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <style>
         body {
-            background-image: url('admin.jpg'); 
+            background-image: url('img/admin.jpg'); 
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
