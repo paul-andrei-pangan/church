@@ -9,6 +9,12 @@ if (!isset($_SESSION['user_id'])) {
 
 $user_id = $_SESSION['user_id'];
 
+// Set default theme and mobile view if not set
+if (!isset($_SESSION['theme'])) {
+    $_SESSION['theme'] = 'light';
+}
+
+
 // Count the total number of crops
 $totalCropsQuery = "SELECT COUNT(*) AS total_crops FROM crops WHERE user_id = '$user_id'";
 $totalCropsResult = $conn->query($totalCropsQuery);
@@ -149,7 +155,7 @@ $netIncome = $totalIncome - $totalExpenses;
 }
     </style>
 </head>
-<body>
+<body class="<?php echo ($_SESSION['theme'] == 'dark') ? 'dark-mode' : 'light-mode'; ?> <?php echo ($_SESSION['mobile_view'] == 'yes') ? 'mobile-view' : ''; ?>">
 
 <!-- Sidebar -->
 <div class="sidebar">
