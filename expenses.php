@@ -43,7 +43,7 @@ if (isset($_GET['delete_expense_id'])) {
     <title>Your Expenses</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        /* General Styles */
+
       /* General Styles */
 body {
     font-family: 'Poppins', sans-serif;

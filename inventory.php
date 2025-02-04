@@ -28,128 +28,123 @@ $inventoryResult = $query->get_result();
     <title>Inventory</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            background: #f8f9fa;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            min-height: 100vh;
-        }
+     /* General Styles */
+     body {
+    font-family: 'Poppins', sans-serif;
+    background: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    min-height: 100vh;
+}
 
-        .sidebar {
-            width: 250px;
-            background: #007bff;
-            color: white;
-            padding: 30px 20px;
-            height: 100vh;
-            position: fixed;
-            top: 0;
-        }
+/* Sidebar Styles */
+.sidebar {
+        width: 250px;
+        background-color: #2c3e50;
+        color: white;
+        padding: 20px;
+        height: 100vh;
+        position: fixed;
+        left: 0;
+        top: 0;
+        display: flex;
+        flex-direction: column;
+    }
 
-        .sidebar h2 {
-            text-align: center;
-            margin-bottom: 20px;
-            font-size: 24px;
-        }
+    .sidebar h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        font-weight: 600;
+        font-size: 18px; /* Smaller font for consistency */
+    }
 
-        .sidebar ul {
-            list-style: none;
-            padding: 0;
-        }
+    .sidebar ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        flex-grow: 1;
+    }
 
-        .sidebar ul li {
-            margin: 15px 0;
-        }
+    .sidebar ul li {
+        margin: 8px 0;
+    }
 
-        .sidebar ul li a {
-            color: white;
-            text-decoration: none;
-            font-size: 18px;
-            display: block;
-            padding: 12px;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
+    .sidebar ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 14px; /* Smaller font size for compactness */
+        display: flex;
+        align-items: center;
+        padding: 8px 12px;
+        border-radius: 5px;
+        transition: 0.3s;
+    }
 
-        .sidebar ul li a:hover {
-            background: #0056b3;
-        }
+    .sidebar ul li a:hover,
+    .sidebar ul li a.active {
+        background: #34495e;
+    }
 
-        .logout {
-            color: red !important;
-        }
+/* Main Content */
+.main-content {
+    margin-left: 280px;
+    padding: 20px;
+    flex-grow: 1;
+}
 
-        .main-content {
-            margin-left: 270px;
-            padding: 40px;
-            width: 100%;
-            background: #fff;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        }
+h2 {
+    color: #333;
+}
 
-        h2 {
-            color: #333;
-            font-size: 28px;
-        }
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
 
-        h3 {
-            color: #007bff;
-            font-size: 24px;
-            margin-bottom: 15px;
-        }
+table, th, td {
+    border: 1px solid #ddd;
+}
 
-        /* Table Styles */
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
+th, td {
+    padding: 10px;
+    text-align: left;
+}
 
-        table, th, td {
-            border: 1px solid #ddd;
-        }
+th {
+    background: #007bff;
+    color: white;
+}
 
-        th, td {
-            padding: 12px;
-            text-align: center;
-        }
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
 
-        th {
-            background: #007bff;
-            color: white;
-        }
+tr:hover {
+    background-color: #ddd;
+}
 
-        tr:nth-child(even) {
-            background: #f2f2f2;
-        }
+/* Button Styles */
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
 
-        tr:hover {
-            background: #f1f1f1;
-        }
+button:hover {
+    background-color: #0056b3;
+}
 
-        /* Responsive Design */
-        @media screen and (max-width: 768px) {
-            .sidebar {
-                width: 100%;
-                height: auto;
-                position: relative;
-            }
-
-            .main-content {
-                margin-left: 0;
-                padding: 30px;
-            }
-
-            table {
-                width: 100%;
-                font-size: 14px;
-            }
-
-            th, td {
-                padding: 10px;
-            }
-        }
+a {
+    text-decoration: none;
+}
     </style>
 </head>
 <body>
