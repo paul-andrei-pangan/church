@@ -43,6 +43,7 @@ if ($result->num_rows > 0) {
     <link rel="stylesheet" href="css/fstyle.css">
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
     /* Sidebar Styles */
     .sidebar {
@@ -56,6 +57,7 @@ if ($result->num_rows > 0) {
         top: 0;
         display: flex;
         flex-direction: column;
+        font-family: 'Poppins', sans-serif;
     }
 
     .sidebar h2 {
