@@ -50,6 +50,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         padding: 0;
         display: flex;
         min-height: 100vh;
+        justify-content: center; /* Center content horizontally */
+        align-items: flex-start; /* Align items to the top */
     }
 
     /* Sidebar Styles */
@@ -64,7 +66,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         top: 0;
         display: flex;
         flex-direction: column;
-        border-right: 2px solid #34495e; /* Slight border for definition */
+        border-right: 2px solid #34495e;
     }
 
     .sidebar h2 {
@@ -74,56 +76,32 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         font-size: 18px;
     }
 
-    .sidebar ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        flex-grow: 1;
-    }
-
-    .sidebar ul li {
-        margin: 8px 0;
-    }
-
-    .sidebar ul li a {
-        color: white;
-        text-decoration: none;
-        font-size: 14px;
-        display: flex;
-        align-items: center;
-        padding: 8px 12px;
-        border-radius: 5px;
-        transition: 0.3s;
-    }
-
-    .sidebar ul li a:hover,
-    .sidebar ul li a.active {
-        background: #34495e;
-    }
-
-    .logout {
-        color: #e74c3c !important;
-        font-weight: bold;
-    }
-
     /* Main Content */
     .main-content {
         margin-left: 280px;
         padding: 20px;
         flex-grow: 1;
+        display: flex;
+        justify-content: center; /* Center the content inside the main-content */
+        align-items: flex-start;
+        width: 100%; /* Ensure content spans the full width */
     }
 
     h2 {
         color: #333;
         font-size: 22px;
+        text-align: center; /* Center the title */
+        margin-bottom: 30px;
     }
 
     /* Table Styles */
     table {
-        width: 100%;
+        width: 80%; /* Limit table width for better centering */
         border-collapse: collapse;
         margin-top: 20px;
         border: 1px solid #ddd;
+        margin-left: auto; /* Center the table */
+        margin-right: auto;
     }
 
     th, td {
@@ -145,22 +123,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         background-color: #ddd;
     }
 
-    /* Button Styles */
-    button, .cancel-button {
-        background-color: #2c3e50;
-        color: white;
-        padding: 8px 12px;
-        font-size: 14px;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: 0.3s;
-    }
-
-    button:hover, .cancel-button:hover {
-        background-color: #34495e;
-    }
-
     /* Form Styles */
     .form-container {
         background-color: #ffffff;
@@ -168,13 +130,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         border-radius: 8px;
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         margin-top: 30px;
-        max-width: 500px;
+        width: 100%;
+        max-width: 500px; /* Max width for the form */
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .form-container h3 {
         margin-bottom: 20px;
         font-size: 18px;
         color: #333;
+        text-align: center; /* Center the form title */
     }
 
     label {
@@ -198,6 +164,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         outline: none;
     }
 
+    /* Button Styles */
+    button, .cancel-button {
+        background-color: #2c3e50;
+        color: white;
+        padding: 8px 12px;
+        font-size: 14px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.3s;
+        display: inline-block;
+        margin-top: 15px;
+        width: 100%; /* Make buttons full-width */
+    }
+
+    button:hover, .cancel-button:hover {
+        background-color: #34495e;
+    }
+
     /* Message Styles */
     .message {
         margin: 15px 0;
@@ -217,6 +202,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
 </style>
+
 
 </head>
 <body>
