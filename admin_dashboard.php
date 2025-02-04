@@ -20,7 +20,7 @@ $result = mysqli_query($conn, $query);
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> <!-- FontAwesome icons -->
     <style>
-        /* Fixed menu button (always visible) */
+        /* Menu Button (Hamburger) */
         .menu-btn {
             font-size: 30px;
             cursor: pointer;
@@ -29,46 +29,30 @@ $result = mysqli_query($conn, $query);
             top: 20px;
             left: 20px;
             z-index: 1000;
-        }
-
-        /* Menu Styling */
-        .menu {
-            position: fixed;
-            top: 60px;
-            left: 20px;
-            background-color: rgba(0, 0, 0, 0.9);
-            color: white;
+            background-color: #000;
             padding: 10px;
             border-radius: 5px;
-            z-index: 1000;
-            width: 150px;
-            text-align: center;
-        }
-
-        .menu a {
-            color: white;
-            text-decoration: none;
-            display: block;
-            padding: 10px;
-            font-size: 18px;
-            border-radius: 5px;
-        }
-
-        .menu a:hover {
-            background-color: #444;
         }
     </style>
 </head>
 <body class="bg-light">
 
-    <!-- Always visible menu button (Hamburger Icon) -->
-    <div class="menu-btn">
+    <!-- Hamburger Menu Button -->
+    <div class="menu-btn" data-bs-toggle="offcanvas" data-bs-target="#sidebarMenu">
         <i class="fas fa-bars"></i>
     </div>
 
-    <!-- Menu (Logout) -->
-    <div class="menu">
-        <a href="logout.php"><i class="fas fa-sign-out-alt"></i> Sign Out</a>
+    <!-- Sidebar Offcanvas Menu -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="sidebarMenu" aria-labelledby="sidebarMenuLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="sidebarMenuLabel">Menu</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <a href="logout.php" class="btn btn-danger w-100">
+                <i class="fas fa-sign-out-alt"></i> Sign Out
+            </a>
+        </div>
     </div>
 
     <div class="container mt-5">
