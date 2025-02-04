@@ -52,48 +52,51 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             min-height: 100vh;
         }
 
-        /* Sidebar Styles */
-        .sidebar {
-            width: 250px;
-            background: #007bff;
-            color: white;
-            padding: 20px;
-            height: 100vh;
-            position: fixed;
-            left: 0;
-            top: 0;
-        }
+     
+.sidebar {
+    width: 220px;
+    background: #1e2a47; 
+    color: white;
+    padding: 15px;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
 
-        .sidebar h2 {
-            text-align: center;
-            margin-bottom: 20px;
-        }
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 15px; 
+    font-size: 22px;
+    color: #f39c12;
+}
 
-        .sidebar ul {
-            list-style: none;
-            padding: 0;
-        }
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
 
-        .sidebar ul li {
-            margin: 15px 0;
-        }
+.sidebar ul li {
+    margin: 10px 0; 
+}
 
-        .sidebar ul li a {
-            color: white;
-            text-decoration: none;
-            font-size: 18px;
-            display: block;
-            padding: 10px;
-            border-radius: 5px;
-        }
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px; 
+    display: block;
+    padding: 8px; 
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
 
-        .sidebar ul li a:hover {
-            background: #0056b3;
-        }
+.sidebar ul li a:hover {
+    background: #34495e; 
 
-        .logout {
-            color: red !important;
-        }
+.logout {
+    color: #e74c3c !important;
+    font-weight: bold;
+}
 
         /* Main Content */
         .main-content {
