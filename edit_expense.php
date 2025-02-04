@@ -186,7 +186,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <li><a href="expenses.php">💸 Expenses</a></li>
         <li><a href="income.php">💰 Income</a></li>
         <li><a href="logout.php" class="logout">🚪 Logout</a></li>
-    </ul>
+    </ul>a href="logout.php" class="logout">🚪 Logout</a></li>
+    
 </div>
 
 <div class="main-content">
