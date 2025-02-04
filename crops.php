@@ -42,70 +42,72 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <style>
-       /* General Styles */
-       body {
-            font-family: 'Poppins', sans-serif;
-            background: #f8f9fa;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            min-height: 100vh;
-        }
-   /* Sidebar Styles */
-   .sidebar {
-            width: 250px;
-            background-color: #2c3e50;
-            color: white;
-            padding: 20px;
-            height: 100vh;
-            position: fixed;
-            left: 0;
-            top: 0;
-            display: flex;
-            flex-direction: column;
-        }
+    /* General Styles */
+    body {
+        font-family: 'Poppins', sans-serif;
+        background: #f8f9fa;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        min-height: 100vh;
+    }
 
-        .sidebar h2 {
-            text-align: center;
-            margin-bottom: 20px;
-            font-weight: 600;
-            font-size: 18px; /* Smaller font for consistency */
-        }
+    /* Sidebar Styles */
+    .sidebar {
+        width: 250px;
+        background-color: #2c3e50;
+        color: white;
+        padding: 20px;
+        height: 100vh;
+        position: fixed;
+        left: 0;
+        top: 0;
+        display: flex;
+        flex-direction: column;
+        border-right: 2px solid #34495e; /* Slight border for definition */
+    }
 
-        .sidebar ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            flex-grow: 1;
-        }
+    .sidebar h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        font-weight: 600;
+        font-size: 18px;
+    }
 
-        .sidebar ul li {
-            margin: 8px 0;
-        }
+    .sidebar ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        flex-grow: 1;
+    }
 
-        .sidebar ul li a {
-            color: white;
-            text-decoration: none;
-            font-size: 14px; /* Smaller font size for compactness */
-            display: flex;
-            align-items: center;
-            padding: 8px 12px;
-            border-radius: 5px;
-            transition: 0.3s;
-        }
+    .sidebar ul li {
+        margin: 8px 0;
+    }
 
-        .sidebar ul li a:hover,
-        .sidebar ul li a.active {
-            background: #34495e;
-        }
+    .sidebar ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        padding: 8px 12px;
+        border-radius: 5px;
+        transition: 0.3s;
+    }
 
+    .sidebar ul li a:hover,
+    .sidebar ul li a.active {
+        background: #34495e;
+    }
 
-        .logout {
-            color: #e74c3c !important;
-            font-weight: bold;
-        }
-   /* Main Content */
-   .main-content {
+    .logout {
+        color: #e74c3c !important;
+        font-weight: bold;
+    }
+
+    /* Main Content */
+    .main-content {
         margin-left: 280px;
         padding: 20px;
         flex-grow: 1;
@@ -113,7 +115,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     h2 {
         color: #333;
-        font-size: 22px; /* Matching the heading size from the dashboard */
+        font-size: 22px;
     }
 
     /* Table Styles */
@@ -121,20 +123,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         width: 100%;
         border-collapse: collapse;
         margin-top: 20px;
-    }
-
-    table, th, td {
         border: 1px solid #ddd;
     }
 
     th, td {
-        padding: 8px 10px; /* Reduced padding for compactness */
+        padding: 12px 15px;
         text-align: left;
-        font-size: 14px; /* Smaller font size for table data */
+        font-size: 14px;
     }
 
     th {
-        background: #007bff;
+        background-color: #007bff;
         color: white;
     }
 
@@ -147,24 +146,78 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     /* Button Styles */
-    button {
+    button, .cancel-button {
         background-color: #2c3e50;
         color: white;
         padding: 8px 12px;
-        font-size: 14px; /* Smaller button text */
+        font-size: 14px;
         border: none;
         border-radius: 5px;
         cursor: pointer;
         transition: 0.3s;
     }
 
-    button:hover {
+    button:hover, .cancel-button:hover {
         background-color: #34495e;
     }
 
-    a {
-        text-d
-    </style>
+    /* Form Styles */
+    .form-container {
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        margin-top: 30px;
+        max-width: 500px;
+    }
+
+    .form-container h3 {
+        margin-bottom: 20px;
+        font-size: 18px;
+        color: #333;
+    }
+
+    label {
+        font-size: 14px;
+        font-weight: 600;
+        color: #555;
+        margin-bottom: 5px;
+        display: block;
+    }
+
+    input[type="text"], input[type="date"] {
+        width: 100%;
+        padding: 10px;
+        margin: 8px 0;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+    }
+
+    input[type="text"]:focus, input[type="date"]:focus {
+        border-color: #007bff;
+        outline: none;
+    }
+
+    /* Message Styles */
+    .message {
+        margin: 15px 0;
+        padding: 10px;
+        border-radius: 5px;
+        font-size: 14px;
+    }
+
+    .message.success {
+        background-color: #2ecc71;
+        color: white;
+    }
+
+    .message.error {
+        background-color: #e74c3c;
+        color: white;
+    }
+
+</style>
+
 </head>
 <body>
 
