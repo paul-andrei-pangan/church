@@ -18,23 +18,34 @@ $result = mysqli_query($conn, $query);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pending Users</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> <!-- Ensure FontAwesome is loaded -->
     <style>
-        /* Optional: Style for the Menu */
+        /* Menu Button (Hamburger Icon) */
+        .menu-btn {
+            font-size: 30px;
+            cursor: pointer;
+            color: #fff;
+            position: fixed; /* Make it fixed at top-right */
+            top: 20px;
+            right: 20px;
+            z-index: 9999; /* Make sure it's on top */
+        }
+
+        /* Menu Styling */
         .menu {
             display: none;
             position: fixed;
             top: 10px;
             right: 10px;
             background-color: rgba(0, 0, 0, 0.8);
-            color: black;
+            color: white;
             padding: 15px;
             border-radius: 5px;
             z-index: 1000;
         }
 
         .menu a {
-            color: black;
+            color: white;
             text-decoration: none;
             display: block;
             padding: 10px;
@@ -43,22 +54,12 @@ $result = mysqli_query($conn, $query);
         .menu a:hover {
             background-color: #444;
         }
-
-        .menu-btn {
-            font-size: 30px;
-            cursor: pointer;
-            color: #fff;
-            padding: 15px;
-            position: absolute;
-            top: 15px;
-            right: 20px;
-        }
     </style>
 </head>
 <body>
     <!-- Hamburger Menu Button -->
     <div class="menu-btn" onclick="toggleMenu()">
-        <i class="fas fa-bars"></i>
+        <i class="fas fa-bars"></i> <!-- FontAwesome hamburger icon -->
     </div>
 
     <!-- Menu -->
