@@ -42,7 +42,7 @@ $totalExpenses = $totalExpensesResult->fetch_assoc()['total_expenses'];
 
 <!-- Sidebar -->
 <div class="sidebar">
-    <h2>Welcome to Your Dashboard</h2>
+    <h2>Farm Management System</h2>
     <ul>
         <li><a href="index.php">🏠 Home</a></li>
         <li><a href="profile.php">👤 Profile</a></li>

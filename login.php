@@ -177,11 +177,10 @@ a:hover {
     <div class="container">
         <!-- Title for Farm Management System with farm icon -->
         <h1 class="site-title">
-            <i class="fas fa-tractor"></i> Farm Management Systemmmmmmm
+            <i class="fas fa-tractor"></i> Farm Management System
         </h1>
 
-        <h2>Admin Login</h2>
-
+        <h2>Login</h2>
         <?php if (isset($error)) { ?>
             <p class="error"><?php echo $error; ?></p>
         <?php } ?>
