@@ -51,13 +51,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             display: flex;
             min-height: 100vh;
         }
-
-     
+/* Sidebar Styles */
 .sidebar {
-    width: 220px;
-    background: #1e2a47; 
+    width: 220px; /* Reduced width */
+    background: #1e2a47; /* Darker blue background */
     color: white;
-    padding: 15px;
+    padding: 15px; /* Reduced padding */
     height: 100vh;
     position: fixed;
     left: 0;
@@ -66,9 +65,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 .sidebar h2 {
     text-align: center;
-    margin-bottom: 15px; 
-    font-size: 22px;
-    color: #f39c12;
+    margin-bottom: 15px; /* Reduced margin */
+    font-size: 22px; /* Slightly smaller font size */
+    color: #f39c12; /* Golden color for the title */
 }
 
 .sidebar ul {
@@ -77,26 +76,29 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 
 .sidebar ul li {
-    margin: 10px 0; 
+    margin: 10px 0; /* Reduced margin between list items */
 }
 
 .sidebar ul li a {
     color: white;
     text-decoration: none;
-    font-size: 16px; 
+    font-size: 16px; /* Smaller font size */
     display: block;
-    padding: 8px; 
+    padding: 8px; /* Reduced padding */
     border-radius: 5px;
     transition: background-color 0.3s ease;
 }
 
 .sidebar ul li a:hover {
-    background: #34495e; 
+    background: #34495e; /* Lighter blue-gray on hover */
+}
 
 .logout {
-    color: #e74c3c !important;
+    color: #e74c3c !important; /* Red color for logout */
     font-weight: bold;
 }
+
+
 
         /* Main Content */
         .main-content {
