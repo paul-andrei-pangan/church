@@ -70,6 +70,7 @@ $netIncome = $totalIncome - $totalExpenses;
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
+            font-family: 'Poppins', sans-serif;
         }
 
         .sidebar h2 {
