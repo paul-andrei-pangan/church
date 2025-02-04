@@ -23,7 +23,7 @@ if (!isset($_SESSION['user_id'])) {
         <div class="profile-section">
             <p><strong>Full Name:</strong> <?php echo $_SESSION['fullname']; ?></p>
             <p><strong>Username:</strong> <?php echo $_SESSION['user_id']; ?></p>
-            <p><strong>Email:</strong> user@example.com</p> <!-- Sample email, replace with dynamic value -->
+            <!-- Removed Email section -->
         </div>
         <button onclick="goBack()" class="btn-back">Back to Home</button>
     </div>

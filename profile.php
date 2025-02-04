@@ -13,8 +13,8 @@ include('db.php');
 // Retrieve the user's data from the database
 $user_id = $_SESSION['user_id']; // Assuming user_id is stored in session
 
-// SQL to fetch the user's data
-$sql = "SELECT fullname, address, contact, ministry, username, password FROM users WHERE user_id = ?";
+// SQL to fetch the user's data (removed 'ministry')
+$sql = "SELECT fullname, address, contact, username, password FROM users WHERE user_id = ?";
 $stmt = $conn->prepare($sql);
 $stmt->bind_param("s", $user_id); // 's' means string (user_id is a string)
 $stmt->execute();
@@ -26,7 +26,6 @@ if ($result->num_rows > 0) {
     $fullname = $user['fullname'];
     $address = $user['address'];
     $contact = $user['contact'];
-    $ministry = $user['ministry'];
     $username = $user['username'];
     // Do not display the password in the profile for security reasons
 } else {
@@ -54,8 +53,7 @@ if ($result->num_rows > 0) {
             <p><strong>Username:</strong> <?php echo $username; ?></p>
             <p><strong>Address:</strong> <?php echo $address; ?></p>
             <p><strong>Contact:</strong> <?php echo $contact; ?></p>
-            <p><strong>Ministry:</strong> <?php echo $ministry; ?></p>
-            <!-- Don't display password for security reasons -->
+            <!-- Removed ministry field -->
         </div>
         <a href="edit_profile.php" class="btn-edit">Edit Profile</a>
         <button onclick="goBack()" class="btn-back">Back to Home</button>

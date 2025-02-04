@@ -1,13 +1,12 @@
 <?php
-$host = "localhost";
-$user = "root"; 
-$pass = "";
-$dbname = "church_management"; // Your database name
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "church_managament";  
 
-// Create connection
-$conn = new mysqli($host, $user, $pass, $dbname);
+// Pag-connect sa database
+$conn = new mysqli($servername, $username, $password, $dbname);
 
-// Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
