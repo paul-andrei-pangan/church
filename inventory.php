@@ -157,13 +157,14 @@ $inventoryResult = $query->get_result();
 <div class="sidebar">
     <h2>🌿 Dashboard</h2>
     <ul>
-        <li><a href="index.php">🏠 Home</a></li>
-        <li><a href="profile.php">👤 Profile</a></li>
-        <li><a href="settings.php">⚙ Settings</a></li>
-        <li><a href="crops.php">🌱 Crops</a></li>
-        <li><a href="inventory.php">📦 Inventory</a></li>
-        <li><a href="logout.php" class="logout">🚪 Logout</a></li>
-    </ul>
+    <li><a href="index.php">🏠 Home</a></li>
+    <li><a href="profile.php">👤 Profile</a></li>
+    <li><a href="settings.php">⚙ Settings</a></li>
+    <li><a href="crops.php">🌱 Crops</a></li>
+    <li><a href="livestock.php">🐄 Livestock</a></li> <!-- Added livestock menu item -->
+    <li><a href="inventory.php">📦 Inventory</a></li>
+    <li><a href="logout.php" class="logout">🚪 Logout</a></li>
+</ul>
 </div>
 
 <div class="main-content">
