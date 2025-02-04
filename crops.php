@@ -183,25 +183,9 @@ body {
         border-color: #007bff;
         outline: none;
     }
-    * Button Styles */
-button {
-    background-color: #007bff;
-    color: white;
-    padding: 10px 15px;
-    font-size: 16px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-button:hover {
-    background-color: #0056b3;
-}
-
     /* Button Styles */
-    button, .cancel-button {
-        background-color:rgb(239, 241, 241);
+    button {
+        background-color: #007bff; /* Blue for Add Crop button */
         color: white;
         padding: 8px 12px;
         font-size: 14px;
@@ -214,8 +198,26 @@ button:hover {
         width: 100%; /* Make buttons full-width */
     }
 
-    button:hover, .cancel-button:hover {
-        background-color:rgb(233, 0, 0);
+    button:hover {
+        background-color: #0056b3; /* Darker blue for hover */
+    }
+
+    .cancel-button {
+        background-color: #e74c3c; /* Red for Cancel button */
+        color: white;
+        padding: 8px 12px;
+        font-size: 14px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.3s;
+        display: inline-block;
+        margin-top: 10px;
+        width: 100%;
+    }
+
+    .cancel-button:hover {
+        background-color: #c0392b; /* Darker red for hover */
     }
 
     /* Message Styles */
