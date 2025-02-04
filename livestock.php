@@ -144,7 +144,7 @@ if (isset($_GET['delete_livestock_id'])) {
 
     /* Button Styles */
     button {
-        background-color: #2c3e50;
+        background-color: blue;
         color: white;
         padding: 8px 12px;
         font-size: 14px; /* Smaller button text */
