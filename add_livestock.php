@@ -148,6 +148,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         button:hover {
             background: #0056b3;
         }
+
+        /* Cancel Button Styles */
+        .cancel-button {
+            background-color: #dc3545;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .cancel-button:hover {
+            background-color: #c82333;
+        }
     </style>
 </head>
 <body>
@@ -183,6 +194,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <input type="date" name="birth_date" id="birth_date" required>
 
             <button type="submit">Add Livestock</button>
+            <!-- Cancel Button -->
+            <a href="livestock.php">
+                <button type="button" class="cancel-button">Cancel</button>
+            </a>
         </form>
     </div>
 </div>
