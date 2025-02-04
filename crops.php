@@ -183,10 +183,25 @@ body {
         border-color: #007bff;
         outline: none;
     }
+    * Button Styles */
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
 
     /* Button Styles */
     button, .cancel-button {
-        background-color: #2c3e50;
+        background-color:rgb(239, 241, 241);
         color: white;
         padding: 8px 12px;
         font-size: 14px;
@@ -200,7 +215,7 @@ body {
     }
 
     button:hover, .cancel-button:hover {
-        background-color: #34495e;
+        background-color:rgb(233, 0, 0);
     }
 
     /* Message Styles */
@@ -263,7 +278,7 @@ body {
             <label for="harvest_date">Harvest Date:</label>
             <input type="date" name="harvest_date" id="harvest_date" required>
 
-            <button type="submit">🌾 Add Crop</button>
+            <button type="submit"> Add Crop</button>
             <!-- Cancel Button -->
             <a href="crops.php">
                 <button type="button" class="cancel-button">Cancel</button>
