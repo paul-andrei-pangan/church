@@ -23,12 +23,12 @@ $result = mysqli_query($conn, $query);
         /* Optional: Style for the Menu */
         .menu {
             display: none;
-            position: absolute;
+            position: fixed;
             top: 10px;
             right: 10px;
             background-color: rgba(0, 0, 0, 0.8);
             color: white;
-            padding: 10px;
+            padding: 15px;
             border-radius: 5px;
             z-index: 1000;
         }
@@ -47,17 +47,18 @@ $result = mysqli_query($conn, $query);
         .menu-btn {
             font-size: 30px;
             cursor: pointer;
-            color: black;
-            padding: 10px;
+            color: #fff;
+            padding: 15px;
+            position: absolute;
+            top: 15px;
+            right: 20px;
         }
     </style>
 </head>
 <body>
     <!-- Hamburger Menu Button -->
-    <div class="d-flex justify-content-end mt-3">
-        <span class="menu-btn" onclick="toggleMenu()">
-            <i class="fas fa-bars"></i>
-        </span>
+    <div class="menu-btn" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
     </div>
 
     <!-- Menu -->
