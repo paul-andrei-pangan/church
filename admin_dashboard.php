@@ -47,7 +47,7 @@ $result = mysqli_query($conn, $query);
         .menu-btn {
             font-size: 30px;
             cursor: pointer;
-            color: #fff;
+            color: black;
             padding: 10px;
         }
     </style>
