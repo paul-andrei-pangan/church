@@ -154,6 +154,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             background: #0056b3;
         }
 
+        /* Cancel Button Styles */
+        .cancel-button {
+            background-color: #dc3545;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .cancel-button:hover {
+            background-color: #c82333;
+        }
+
         /* Success/Error Messages */
         .message {
             padding: 10px;
@@ -170,27 +181,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         .error {
             background: #dc3545;
             color: white;
-        }
-
-        /* Responsive Design */
-        @media screen and (max-width: 768px) {
-            .sidebar {
-                width: 100%;
-                height: auto;
-                position: relative;
-            }
-
-            .main-content {
-                margin-left: 0;
-                width: 100%;
-                padding: 20px;
-            }
-
-            .form-container {
-                width: 100%;
-                max-width: 400px;
-                margin: auto;
-            }
         }
     </style>
 </head>
@@ -233,6 +223,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <input type="date" name="harvest_date" id="harvest_date" required>
 
             <button type="submit">🌾 Add Crop</button>
+            <!-- Cancel Button -->
+            <a href="crops.php">
+                <button type="button" class="cancel-button">Cancel</button>
+            </a>
         </form>
     </div>
 </div>
