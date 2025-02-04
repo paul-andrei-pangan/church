@@ -45,49 +45,53 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             background-color: #f4f4f4;
             display: flex;
         }
+/* Sidebar Styles */
+.sidebar {
+        width: 250px;
+        background-color: #2c3e50;
+        color: white;
+        padding: 20px;
+        height: 100vh;
+        position: fixed;
+        left: 0;
+        top: 0;
+        display: flex;
+        flex-direction: column;
+    }
 
-        /* Sidebar Styles */
-        .sidebar {
-            width: 250px;
-            background-color: #2c3e50;
-            color: #fff;
-            padding: 20px 10px;
-            position: fixed;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-        }
+    .sidebar h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        font-weight: 600;
+        font-size: 18px; /* Smaller font for consistency */
+    }
 
-        .sidebar h2 {
-            text-align: center;
-            margin-bottom: 20px;
-            color: #ecf0f1;
-            font-size: 20px;
-        }
+    .sidebar ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        flex-grow: 1;
+    }
 
-        .sidebar ul {
-            list-style: none;
-            padding: 0;
-        }
+    .sidebar ul li {
+        margin: 8px 0;
+    }
 
-        .sidebar ul li {
-            margin: 10px 0; /* Reduced margin between items */
-        }
+    .sidebar ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 14px; /* Smaller font size for compactness */
+        display: flex;
+        align-items: center;
+        padding: 8px 12px;
+        border-radius: 5px;
+        transition: 0.3s;
+    }
 
-        .sidebar ul li a {
-            color: #fff;
-            text-decoration: none;
-            font-size: 14px; /* Smaller font size for compactness */
-            display: block;
-            padding: 8px 12px; /* Reduced padding for smaller buttons */
-            border-radius: 4px;
-        }
-
-        .sidebar ul li a:hover {
-            background-color: #34495e;
-        }
-
+    .sidebar ul li a:hover,
+    .sidebar ul li a.active {
+        background: #34495e;
+    }
         .main-content {
             margin-left: 250px;
             padding: 30px;
