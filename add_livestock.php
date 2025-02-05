@@ -101,7 +101,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         flex-grow: 1;
     }
         h2 {
-            color: #333;
+            color: white;
         }
 
         /* Add Livestock Form */
