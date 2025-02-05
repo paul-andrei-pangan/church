@@ -170,7 +170,7 @@ a:hover {
 <div class="background-video">
     <video autoplay muted loop id="bg-video">
         <!-- Path to the video file in the 'video' folder (change the video to farm-related one) -->
-        <source src="video/bgchurch.mp4" type="video/mp4">
+        <source src="video/farmmm.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
 </div>
