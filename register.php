@@ -42,6 +42,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
     <link rel="stylesheet" href="css/style.css">
+    <style>
+            body {
+        background-image: url('img/farmm.jpg'); 
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .card {
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(5px); 
+        border-radius: 10px;
+    }
+    </style>
 </head>
 <body>
 
