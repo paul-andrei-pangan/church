@@ -60,7 +60,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body>
 
     <div class="container">
-        <h2>Register</h2>
+        <h2>Registration</h2>
 
         <?php if (isset($success_message)) { echo "<p class='success'>$success_message</p>"; } ?>
         <?php if (isset($error_message)) { echo "<p class='error'>$error_message</p>"; } ?>
