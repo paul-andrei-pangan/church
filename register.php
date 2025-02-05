@@ -8,14 +8,26 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST['username'];
     $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
-    // Insert user with status 'pending'
-    $stmt = $conn->prepare("INSERT INTO users (FullName, Address, Contact, username, password, status) VALUES (?, ?, ?, ?, ?, 'pending')");
-    $stmt->bind_param("sssss", $fullname, $address, $contact, $username, $password);
+    // Check if the username already exists
+    $check_query = "SELECT * FROM users WHERE username = ?";
+    $stmt = $conn->prepare($check_query);
+    $stmt->bind_param("s", $username);
+    $stmt->execute();
+    $result = $stmt->get_result();
 
-    if ($stmt->execute()) {
-        $success_message = "Registration successful! Your account is pending approval. Please wait for admin approval.";
+    if ($result->num_rows > 0) {
+        // Username already exists
+        $error_message = "Username is already taken. Please choose a different one.";
     } else {
-        $error_message = "Error: " . $stmt->error;
+        // Insert user with status 'pending'
+        $stmt = $conn->prepare("INSERT INTO users (FullName, Address, Contact, username, password, status) VALUES (?, ?, ?, ?, ?, 'pending')");
+        $stmt->bind_param("sssss", $fullname, $address, $contact, $username, $password);
+
+        if ($stmt->execute()) {
+            $success_message = "Registration successful! Your account is pending approval. Please wait for admin approval.";
+        } else {
+            $error_message = "Error: " . $stmt->error;
+        }
     }
 
     $stmt->close();
