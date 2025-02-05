@@ -14,6 +14,7 @@ if (!isset($_SESSION['theme'])) {
     $_SESSION['theme'] = 'light';
 }
 
+
 // Count the total number of crops
 $totalCropsQuery = "SELECT COUNT(*) AS total_crops FROM crops WHERE user_id = '$user_id'";
 $totalCropsResult = $conn->query($totalCropsQuery);
@@ -50,8 +51,6 @@ $netIncome = $totalIncome - $totalExpenses;
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Farm Management</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <!-- Include Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -144,17 +143,17 @@ $netIncome = $totalIncome - $totalExpenses;
         }
 
         #chart-container {
-            width: 100%;
-            height: 400px; /* Increased height for a bigger graph */
-            margin: 40px auto;
-            display: flex;
-            justify-content: center;
-        }
+    width: 100%;
+    height: 400px; /* Increased height for a bigger graph */
+    margin: 40px auto;
+    display: flex;
+    justify-content: center;
+}
 
-        #dashboardChart {
-            max-width: 95%; /* Increased the max-width to make the graph slightly larger */
-            height: 300px;  /* Adjusted height for a better proportion */
-        }
+#dashboardChart {
+    max-width: 95%; /* Increased the max-width to make the graph slightly larger */
+    height: 300px;  /* Adjusted height for a better proportion */
+}
     </style>
 </head>
 <body class="<?php echo ($_SESSION['theme'] == 'dark') ? 'dark-mode' : 'light-mode'; ?> <?php echo ($_SESSION['mobile_view'] == 'yes') ? 'mobile-view' : ''; ?>">
@@ -182,31 +181,31 @@ $netIncome = $totalIncome - $totalExpenses;
     <div class="stats">
         <!-- Total Crops -->
         <div class="stat-box">
-            <h3><i class="fas fa-seedling"></i> Total Crops</h3>
+            <h3>Total Crops</h3>
             <span><?php echo $totalCrops; ?></span>
         </div>
 
         <!-- Total Livestock -->
         <div class="stat-box">
-            <h3><i class="fas fa-cow"></i> Total Livestock</h3>
+            <h3>Total Livestock</h3>
             <span><?php echo $totalLivestock; ?></span>
         </div>
 
         <!-- Total Inventory -->
         <div class="stat-box">
-            <h3><i class="fas fa-box"></i> Total Inventory</h3>
+            <h3>Total Inventory</h3>
             <span><?php echo $totalInventory; ?></span>
         </div>
 
         <!-- Total Expenses -->
         <div class="stat-box">
-            <h3><i class="fas fa-money-bill-wave"></i> Total Expenses</h3>
+            <h3>Total Expenses</h3>
             <span>₱<?php echo number_format($totalExpenses, 2); ?></span>
         </div>
 
         <!-- Net Income -->
         <div class="stat-box">
-            <h3><i class="fas fa-wallet"></i> Net Income</h3>
+            <h3>Net Income</h3>
             <span>₱<?php echo number_format($netIncome, 2); ?></span>
         </div>
     </div>
