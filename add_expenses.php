@@ -189,7 +189,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             }
         }
         h3{
-            color: white;
+            color: black;
         font-size: 22px;
         text-align: center; /* Center the title */
         margin-bottom: 30px;
