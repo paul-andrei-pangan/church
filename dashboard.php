@@ -49,7 +49,7 @@ $netIncome = $totalIncome - $totalExpenses;
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
+    <title>Farm Management</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         body {
@@ -160,7 +160,7 @@ $netIncome = $totalIncome - $totalExpenses;
 
 <!-- Sidebar -->
 <div class="sidebar">
-    <h2>Dashboard</h2>
+    <h2>🚜Farm Management</h2>
     <ul>
         <li><a href="dashboard.php">🏠 Home</a></li>
         <li><a href="profile.php">👤 Profile</a></li>
