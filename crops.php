@@ -113,6 +113,13 @@ body {
         text-align: center; /* Center the title */
         margin-bottom: 30px;
     }
+    h3{
+        color: white
+        color: white;
+        font-size: 22px;
+        text-align: center; /* Center the title */
+        margin-bottom: 30px;
+    }
 
     /* Table Styles */
     table {
@@ -260,7 +267,7 @@ body {
 </div>
 
 <div class="main-content">
-    <h2>🌱 Add a New Crop</h2>
+    <h3>🌱 Add a New Crop</h3>
 
     <?php if (isset($success_message)): ?>
         <div class="message success"><?php echo $success_message; ?></div>
