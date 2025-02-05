@@ -177,7 +177,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         .cancel-button:hover {
             background: #c82333;
         }
-
+        h3{
+            color: black;
+        font-size: 22px;
+        text-align: center; /* Center the title */
+        margin-bottom: 30px;
+        }
         /* Responsive Design */
         @media screen and (max-width: 768px) {
             .sidebar {
@@ -218,7 +223,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 </div>
 
 <div class="main-content">
-    <h2>Edit Livestock</h2>
+    <h3>Edit Livestock</h3>
 
     <div class="form-container">
         <h3>Update Livestock Information</h3>

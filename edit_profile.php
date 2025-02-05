@@ -195,6 +195,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     .btn-back:hover {
         background-color: #c0392b;
     }
+    h3{
+            color: black;
+        font-size: 22px;
+        text-align: center; /* Center the title */
+        margin-bottom: 30px;
+        }
 
     /* Mobile responsiveness */
     @media (max-width: 768px) {
@@ -246,7 +252,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </div>
 
     <div class="container">
-        <h2>Edit Profile</h2>
+        <h3>Edit Profile</h3>
         <form method="POST">
             <label for="fullname">Full Name:</label>
             <input type="text" name="fullname" value="<?php echo $fullname; ?>" required><br>

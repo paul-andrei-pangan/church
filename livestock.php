@@ -161,6 +161,12 @@ if (isset($_GET['delete_livestock_id'])) {
     a {
         text-decoration: none;
     }
+    h3{
+            color: black;
+        font-size: 22px;
+        text-align: center; /* Center the title */
+        margin-bottom: 30px;
+        }
     </style>
 </head>
 <body>
@@ -181,7 +187,7 @@ if (isset($_GET['delete_livestock_id'])) {
 </div>
 
 <div class="main-content">
-    <h2>Your Livestock</h2>
+    <h3>Your Livestock</h3>
 
     <!-- Add Livestock Button -->
     <a href="add_livestock.php"><button>Add New Livestock</button></a><br><br>

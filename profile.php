@@ -157,6 +157,12 @@ if ($result->num_rows > 0) {
     .btn-back:hover {
         background-color: #c0392b;
     }
+    h3{
+            color: black;
+        font-size: 22px;
+        text-align: center; /* Center the title */
+        margin-bottom: 30px;
+        }
 
     /* Mobile responsive styles */
     @media (max-width: 768px) {
@@ -206,7 +212,7 @@ if ($result->num_rows > 0) {
     </ul>
 </div>
     <div class="container">
-        <h2><i class="fa-solid fa-user"></i> User Profile</h2>
+        <h3><i class="fa-solid fa-user"></i> User Profile</h3>
         <div class="profile-section">
             <p><strong>Full Name:</strong> <?php echo $fullname; ?></p>
             <p><strong>Username:</strong> <?php echo $username; ?></p>

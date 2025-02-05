@@ -145,6 +145,12 @@ button:hover {
 a {
     text-decoration: none;
 }
+h3{
+            color: black;
+        font-size: 22px;
+        text-align: center; /* Center the title */
+        margin-bottom: 30px;
+        }
     </style>
 </head>
 <body>
@@ -165,7 +171,6 @@ a {
 </div>
 
 <div class="main-content">
-    <h2>Your Inventory</h2>
     
     <h3>Crops in Your Inventory:</h3>
     <table>

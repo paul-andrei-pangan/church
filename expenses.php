@@ -161,6 +161,12 @@ button:hover {
 a {
     text-decoration: none;
 }
+h3{
+            color: black;
+        font-size: 22px;
+        text-align: center; /* Center the title */
+        margin-bottom: 30px;
+        }
 
     </style>
 </head>
@@ -182,7 +188,7 @@ a {
 </div>
 
 <div class="main-content">
-    <h2>Your Expenses</h2>
+    <h3>Your Expenses</h3>
 
     <!-- Add Expense Button -->
     <a href="add_expenses.php"><button>Add New Expense</button></a><br><br>

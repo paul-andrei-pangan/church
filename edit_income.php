@@ -179,6 +179,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         .cancel-button:hover {
             background-color: #c82333;
         }
+        h3{
+            color: black;
+        font-size: 22px;
+        text-align: center; /* Center the title */
+        margin-bottom: 30px;
+        }
     </style>
 </head>
 <body>
@@ -199,7 +205,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 </div>
 
 <div class="main-content">
-    <h2>Edit Income</h2>
+    <h3>Edit Income</h3>
 
     <!-- Edit Income Form -->
     <form method="POST" action="">

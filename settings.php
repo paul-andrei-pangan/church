@@ -280,6 +280,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         button:hover {
             background-color: <?php echo ($theme == 'dark') ? '#2980b9' : '#34495e'; ?>;
         }
+        h3{
+            color: black;
+        font-size: 22px;
+        text-align: center; /* Center the title */
+        margin-bottom: 30px;
+        }
     </style>
 </head>
 <body class="<?php echo ($_SESSION['theme'] == 'dark') ? 'dark-mode' : 'light-mode'; ?> <?php echo ($_SESSION['mobile_view'] == 'yes') ? 'mobile-view' : ''; ?>">
@@ -300,7 +306,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </div>
 
 <div class="container">
-    <h2>Settings</h2>
+    <h3>Settings</h3>
     <form method="POST">
         <label for="theme">Select Theme:</label>
         <select name="theme" id="theme">
