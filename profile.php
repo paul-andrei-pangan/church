@@ -104,7 +104,7 @@ if ($result->num_rows > 0) {
     }
 
     h2 {
-        color: #333;
+        color: white;
         font-size: 22px;
         text-align: center;
         margin-bottom: 20px;

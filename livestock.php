@@ -108,7 +108,7 @@ if (isset($_GET['delete_livestock_id'])) {
     }
 
     h2 {
-        color: #333;
+        color: white;
         font-size: 25px; /* Matching the heading size from the dashboard */
     }
 

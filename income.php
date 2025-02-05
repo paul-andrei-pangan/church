@@ -109,7 +109,7 @@ if (isset($_GET['delete_income_id'])) {
 }
 
 h2 {
-    color: #333;
+    color: white;
 }
 
 /* Table Styles */

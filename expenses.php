@@ -110,7 +110,7 @@ body {
 }
 
 h2 {
-    color: #333;
+    color: white;
 }
 
 /* Table Styles */

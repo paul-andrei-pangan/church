@@ -127,7 +127,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
 
         h2 {
-            color: #333;
+            color: white;
         }
 
         /* Add Expense Form */
