@@ -108,7 +108,7 @@ body {
 }
 
     h2 {
-        color: #333;
+        color: white;
         font-size: 22px;
         text-align: center; /* Center the title */
         margin-bottom: 30px;
