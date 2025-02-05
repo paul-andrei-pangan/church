@@ -188,6 +188,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 margin: auto;
             }
         }
+        h3{
+            color: white;
+        font-size: 22px;
+        text-align: center; /* Center the title */
+        margin-bottom: 30px;
+        }
     </style>
 </head>
 <body>
@@ -210,7 +216,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 <!-- Main Content -->
 <div class="main-content">
-    <h2>💸 Add a New Expense</h2>
+    <h3>💸 Add a New Expense</h3>
 
     <?php if (isset($success_message)): ?>
         <div class="message success"><?php echo $success_message; ?></div>
